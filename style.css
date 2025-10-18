@@ -1,0 +1,224 @@
+/* style.css */
+
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap");
+
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #111;
+  color: #eee;
+  line-height: 1.8;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  background: #000;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-bottom: 2px solid #a66f2e;
+}
+
+header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  color: #a66f2e;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #a66f2e;
+}
+
+/* Main Content */
+main {
+  padding: 3rem 10%;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f3c77e;
+}
+
+p,
+li {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  text-align: center;
+  padding: 2rem;
+  border-top: 2px solid #a66f2e;
+  color: #aaa;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(166, 111, 46, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Blockquote */
+blockquote {
+  border-left: 4px solid #a66f2e;
+  padding-left: 1rem;
+  font-style: italic;
+  color: #ccc;
+  margin: 2rem 0;
+}
+
+/* Responsive Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* List Styling */
+ul {
+  padding-left: 1.5rem;
+}
+
+/* Links in Content */
+a {
+  color: #f3c77e;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #ffdcae;
+}
+/* Contact Form Styling */
+.contact-form {
+  max-width: 600px;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-form label {
+  font-weight: bold;
+  color: #f3c77e;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem 1rem;
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid #a66f2e;
+  outline: none;
+}
+
+.contact-form button {
+  background-color: #a66f2e;
+  color: #111;
+  font-weight: bold;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #c08030;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  main {
+    padding: 2rem 5%; /* Smaller padding on mobile */
+  }
+
+  /* Gallery switches to single column */
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  /* Hide sticky sidebar on mobile */
+  .sidebar-fact {
+    display: none;
+  }
+
+  /* Smaller header font size */
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Stack nav links vertically */
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  nav a {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+}
+
+/* Ensure images scale nicely */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
